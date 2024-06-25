@@ -1,6 +1,4 @@
 version: '3.7'
 services:
-  nginx:
-    image: nginx:latest
-    volumes:
-      - ./nginx:/etc/nginx/
+  nginx-proxy:
+    image: ghcr.io/andreitere/coolify-nginx-reverse-proxy:${VERSION:-latest}
