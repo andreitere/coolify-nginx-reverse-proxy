@@ -2,3 +2,5 @@ version: '3.7'
 services:
   nginx-proxy:
     image: ghcr.io/andreitere/coolify-nginx-reverse-proxy:${VERSION:-latest}
+    ports:
+      - "80"
