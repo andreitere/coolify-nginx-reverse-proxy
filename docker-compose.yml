@@ -3,6 +3,4 @@ services:
   nginx-proxy:
     image: ghcr.io/andreitere/coolify-nginx-reverse-proxy:${VERSION:-latest}
     environment:
-      - SERVICE_FQDN_PLEXPROXY
-    ports:
-      - "80"
+      - PROXY_HOST_PORT=${PROXY_HOST_PORT}
