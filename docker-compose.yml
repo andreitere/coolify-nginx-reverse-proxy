@@ -1,6 +1,8 @@
 version: '3.7'
 services:
   nginx-proxy:
-    image: ghcr.io/andreitere/coolify-nginx-reverse-proxy:${VERSION:-latest}
+    build:
+        context: .
+        dockerfile: Dockerfile
     environment:
       - PROXY_HOST_PORT=${PROXY_HOST_PORT}
