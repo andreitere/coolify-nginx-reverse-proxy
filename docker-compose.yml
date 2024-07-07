@@ -5,5 +5,4 @@ services:
         context: .
         dockerfile: Dockerfile
     environment:
-      - PROXY_HOST_PORT=${PROXY_HOST_PORT}
-      - PROXY_HOST_PROTOCOL=${PROXY_HOST_PROTOCOL:-http}
+      - PROXY_HOST=${PROXY_HOST}
