@@ -1,8 +1,11 @@
 # Use the official Nginx image as a base
 FROM nginx:latest
 
+
+ARG CONF_TYPE
+
 # Copy the custom Nginx configuration file to the container
-COPY nginx-template.conf /etc/nginx/conf.d/nginx-template.conf
+COPY ${CONF_TYPE}.conf /etc/nginx/conf.d/nginx-template.conf
 
 EXPOSE 80
 

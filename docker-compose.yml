@@ -4,5 +4,7 @@ services:
     build:
         context: .
         dockerfile: Dockerfile
+        args:
+          CONF_TYPE: ${CONF_TYPE:-default}
     environment:
       - PROXY_HOST=${PROXY_HOST}
