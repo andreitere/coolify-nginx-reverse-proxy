@@ -2,7 +2,7 @@
 FROM nginx:latest
 
 
-ARG CONF_TYPE
+ARG CONF_TYPE=default
 
 # Copy the custom Nginx configuration file to the container
 COPY ${CONF_TYPE}.conf /etc/nginx/conf.d/nginx-template.conf
