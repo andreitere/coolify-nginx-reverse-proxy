@@ -43,6 +43,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             ${{ github.event.release.tag_name }}
+            latest
           labels: |
             type=ref,event=tag
 
